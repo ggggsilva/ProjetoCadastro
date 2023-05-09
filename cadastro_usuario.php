@@ -17,7 +17,7 @@
     echo $sql."<br>";
     $result = mysqli_query($con, $sql);
     if($result)
-         echo "Dados cadastardos com sucesso!";
-         else 
-         echo "Erro ao tentar cadastrar!";
+         echo "Dados cadastrados com sucesso!";
+         else
+         echo "Erro ao tentar cadastrar!" . mysqli_error($con);
 ?>
