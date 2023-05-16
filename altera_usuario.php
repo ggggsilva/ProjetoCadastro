@@ -16,12 +16,14 @@
 </head>
 <body>
     <h1>Cadastro de Usuarios - IFSP</h1>
-    <form action="altera_usuario.php" method="post">
+    <form action="altera_usuario_exe.php" method="post">
+      <input name="id_usuario" type="hidden" 
+      value="<?php echo $row['id_usuario']?>">
   
         <div>
     <label for="nome">Nome</label>
     <input type="text" name="nome" id="nome"
-    value="<?php echo $row['nome_usuario'] ?> ">
+    value="<?php echo $row['nome_usuario']?>">
   </div>
   
   <div>

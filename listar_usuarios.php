@@ -34,12 +34,12 @@
         echo "<td>" . $row['nome_usuario']."</td>";
         echo "<td>" . $row['email_usuario']."</td>";
         echo "<td>" . $row['fone_usuario']."</td>";
-        echo "<td><a href= 'altera_usuario.php?id_usuario=".$row['id_usuario']. "'>Alterar</a> </td>";
+        echo "<td><a href= 'alterar_usuario.php?id_usuario=". $row['id_usuario']. "'>Alterar</a> </td>";
+        echo "<td><a href= 'deletar_usuario.php?id_usuario=". $row['id_usuario']. "'>Deletar</a> </td>";
         echo "</tr>";
-       }while($row = mysqli_fetch_array($result))
-
-
-    ?>
+        }while($row = mysqli_fetch_array($result))
+        
+        ?>
 
   <a href="index.php">Voltar</a>
 
