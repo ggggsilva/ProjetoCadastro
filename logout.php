@@ -5,5 +5,5 @@ session_unset();
 //DESTRÓI A SESSÃO
 session_destroy();
 //VOLTA PARA A PÁGINA INICIAL
-header('location: index.php');
+header('Location: index.php');
 ?>
