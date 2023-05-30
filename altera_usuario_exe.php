@@ -19,7 +19,7 @@ $sql = "UPDATE usuario SET
         email_usuario='$email',
         fone_usuario='$fone',
         senha='$senha',
-        foto='$nome_foto'
+        foto='$nome_foto',
         WHERE id_usuario=$id_usuario";
 
 echo $sql;
