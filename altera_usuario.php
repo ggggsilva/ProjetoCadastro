@@ -10,7 +10,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" enctype="multipart/form-data">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
@@ -19,7 +19,7 @@
     <form action="altera_usuario_exe.php" method="post">
       <input name="id_usuario" type="hidden" 
       value="<?php echo $row['id_usuario']?>">
-  
+  <img src='<?php $row=['foto']?>'>
         <div>
     <label for="nome">Nome</label>
     <input type="text" name="nome" id="nome"
@@ -43,6 +43,9 @@
   <label for="senha">Senha</label>
   <input type="password" name="senha" id="senha"
   value="<?php echo $row['senha'] ?> ">
+</div>
+<div>
+  <input type="file" name="foto" id="foto" accept="image/*">
 </div>
 <input type="submit" value="Salvar">
 

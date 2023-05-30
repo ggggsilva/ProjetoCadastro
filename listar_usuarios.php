@@ -21,25 +21,35 @@
     <table align="center" border="1" width="500">
     <tr>
         <th>Código</th>
+        <th>Foto</th>
         <th>Nome</th>
         <th>E-mail</th>
         <th>Telefone</th>
+        <th>Alterar</th>
+        <th>deletar</th>
 
     </tr>
     <?php
-       do{
+       do{ 
+        if($row)
+        { 
 
         echo "<tr>";
         echo "<td>" . $row['id_usuario']."</td>";
+        if($row['foto'] == "")
+            echo "<td></td>";
+        else 
+        
+        echo "<td><img src='" . $row['foto']. "' width='80' height='100'/></td>";
         echo "<td>" . $row['nome_usuario']."</td>";
         echo "<td>" . $row['email_usuario']."</td>";
         echo "<td>" . $row['fone_usuario']."</td>";
         echo "<td><a href= 'alterar_usuario.php?id_usuario=". $row['id_usuario']. "'>Alterar</a> </td>";
         echo "<td><a href= 'deletar_usuario.php?id_usuario=". $row['id_usuario']. "'>Deletar</a> </td>";
-        echo "</tr>";
-        }while($row = mysqli_fetch_array($result))
+        echo "</tr>"; }
+        }while($row = mysqli_fetch_array($result)) 
         
-        ?>
+        ?> 
 
   <a href="index.php">Voltar</a>
 
